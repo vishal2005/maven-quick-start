@@ -8,10 +8,10 @@ pipeline {
         }
         stage('test') {
             when {
-                expression {
-                 env.BRANCH_NAME == 'main'   
+                anyOf {
+                    
+                  branch 'main'           
                 }
-            
             }
             steps {
                 echo "Testing the application"
