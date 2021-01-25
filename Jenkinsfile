@@ -9,15 +9,16 @@ pipeline {
         stage('test') {
             when {
                 expression {
-                 env.BRANCH_NAME == 'dev'   
+                 env.BRANCH_NAME == 'main'   
                 }
-            }
+            
             
             steps {
                 echo "Testing the application"
                 
             }
         }
+      }
         stage('Deploy') {
             steps {
                 echo "Deploying the application"
