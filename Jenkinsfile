@@ -12,12 +12,12 @@ pipeline {
                  env.BRANCH_NAME == 'main'   
                 }
             
-            
+            }
             steps {
                 echo "Testing the application"
                 
             }
-        }
+        
       }
         stage('Deploy') {
             steps {
