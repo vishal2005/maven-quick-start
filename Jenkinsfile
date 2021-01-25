@@ -7,18 +7,13 @@ pipeline {
             }
         }
         stage('test') {
-            when {
-                anyOf {
-                    
-                  branch 'main'           
-                }
-            }
             steps {
                 echo "Testing the application"
-                
             }
-        
-      }
+          
+            
+        }
+      
         stage('Deploy') {
             steps {
                 echo "Deploying the application"
